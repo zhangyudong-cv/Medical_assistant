@@ -11,3 +11,9 @@ LLM_CONFIG = {
 MEM0_CONFIG = {
     "api_key": "m0-cJUJqcVNfwNipd0PqxFIaoMj9epaj6SRSY9dK69A",
 }
+
+# Milvus 数据库配置 (远程服务器)
+MILVUS_CONFIG = {
+    "uri": "http://192.168.100.128:19530",
+    "collection_name": "medical_knowledge",
+}

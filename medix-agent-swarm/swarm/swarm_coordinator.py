@@ -379,7 +379,8 @@ class SwarmCoordinator:
             'swarm_metadata': shared_context.get_summary(),
             'timeout_occurred': timeout_occurred
         }
-
+        #结果返回json格式
+        
         # 提取建议和免责声明（简化实现）
         result['suggestions'] = self._extract_suggestions(final_answer)
 
@@ -418,7 +419,7 @@ class SwarmCoordinator:
             tasks = []
             for subtask in assigned_tasks:
                 logger.info(f"{worker.agent_id}: Starting {subtask.type}")
-                shared_context.start_subtask(subtask.id)
+                shared_context.start_subtask(subtask.id)  #开始执行子任务
 
                 task = asyncio.create_task(
                     self._execute_single_subtask(worker, subtask, shared_context)
